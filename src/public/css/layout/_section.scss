@@ -1,0 +1,71 @@
+.form-cadastro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 50px 30px 30px 30px;
+        border: 1px solid $color-primary;
+        border-radius: 80px 80px 0 0;
+        box-shadow: 0 0 15px rgba($color: $color-primary, $alpha: .7);
+        transition: all 800ms ease;
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        &:hover {
+            border-radius: 0 0 80px 80px;
+            transform: scale(1.03);
+        }
+    
+        .campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            label {
+                font-size: 1.2rem;
+            }
+
+            input {
+                margin-top: 2px;
+                padding: 8px 4px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+            }
+        }
+
+        .btn {
+            margin-top: 30px;
+            text-align: center;
+
+            button {
+                padding: 5px 10px;
+                text-transform: uppercase;
+                border: none;
+                outline: none;
+                font-weight: bold;
+                background-color: $color-primary;
+                color: black;
+                transition: all 300ms ease;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: black;
+                    color: $color-primary;
+                    border: 1px solid $color-primary;
+                }
+            }
+        }
+    }
+
+}

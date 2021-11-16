@@ -8,26 +8,22 @@
         <%- include('partials/header.ejs') %>
 
         <section class="form-cadastro">
-            <form action="/register" method="POST">
-                <h2>Faça seu cadastro</h2>
+            <form action="/editUsers<%= user._id %>" method="POST">
+                <h2>Editar Usuario</h2>
                 <div class="campo">
                     <label for="name">Nome</label>
-                    <input type="text" name="name" id="name" placeholder="Digite o seu nome">
+                    <input type="text" name="name" id="name" placeholder="Digite o seu nome" value="<%= user.name %>">
                 </div>
                 <div class="campo">
                     <label for="age">Idade</label>
-                    <input type="number" name="age" id="age" placeholder="Digite a sua idade">
+                    <input type="number" name="age" id="age" placeholder="Digite a sua idade" value="<%= user.age %>">
                 </div>
                 <div class="campo">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" placeholder="Digite o seu e-mail">
-                </div>
-                <div class="campo">
-                    <label for="password">Senha</label>
-                    <input type="password" name="password" id="password" placeholder="Digite a sua senha">
+                    <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" value="<%= user.email %>">
                 </div>
                 <div class="btn">
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit">Editar</button>
                 </div>
                 <div class="msg">
                     <% if(typeof message !== 'undefined') { %>
